@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Philosopher:ital@1&family=Poppins:ital,wght@1,300&display=swap');
+/* font-family: 'Bebas Neue', sans-serif; */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #474350;
+    padding: 30px 190px;
+    height: 100vh;
+    width: 100%;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    width: 999px;
+    align-items: center;
+}
+.nav h2{
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+/* font-family: 'Bebas Neue', sans-serif; */
+}
+span{
+    color: #ffd60a;
+}
+.nav .nav-right img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.nav .nav-right{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.search{
+    background-color: #e5e5e5;
+    height: 40px;
+    width: 300px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    padding: 0 15px;
+    font-size: 14px;
+}
+.nav-right ion-icon{
+    /* background-color: red; */
+    margin-left: -50px;
+    font-size: 25px;
+    color: black;
+    cursor: pointer;
+}
+/* contnt */
+.content{
+    display: grid;
+    margin-top: 15px;
+}
+
+.home{
+    grid-column: 1;
+    grid-row: 1;
+    width: 999px;
+    border-radius: 5px;
+}
+.content .info{
+    grid-column: 1;
+    grid-row: 1;
+    color: white;
+    width: 350px;
+    align-items: center;
+    padding: 120px 30px;
+}
+.info h2{
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-family: 'EB Garamond', serif;
+    margin-bottom: 10px;
+}
+.info p{
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    color: #ffd60a;
+        font-family: 'Poppins', sans-serif;
+}
+.info button{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    background-color: #0000;
+    color: white;
+    font-size: 14px;
+    text-transform: capitalize;
+    border: none;
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+.info button ion-icon{
+    border-radius: 50%;
+    font-size: 40px;
+    color: orange;
+}
+.title{
+    background-color: #e5e5e5;
+    border-radius: 5px;
+    padding: 10px 10px;
+    width: 999px;
+    position: relative;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/*  */
+.boxes{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+    width: 999px;
+    position: relative;
+    margin-bottom:10px;
+    padding: 10px;
+}
+.boxes .box{
+    display: grid;
+    width: 230px;
+}
+.box img{
+    height: 330px;
+    width: 100%;
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 5px;
+    transition:all .5s;
+}
+.box img:hover{
+    scale: 1.05;
+}
+.box .details{
+    grid-column: 1;
+    grid-row: 1;
+    align-self: flex-end;
+    position: relative;
+    color: #ffffff;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:rgba(0,0,0,0.3);
+}
+.box .details .detail h2{
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 20px;
+}
+.details .detail p{
+    font-size: 18px;
+}
+
+.details ion-icon{
+    color: orange;
+    font-size: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.buttons{
+    position: absolute;
+    /* background-color: red; */
+    align-items: center;
+    width: 100%;
+   top: 40%;
+   font-size: 50px;
+}
+.btn-right{
+    position: absolute;
+    right: -30px;
+    color: white;
+}
+.btn-left{
+    position: absolute;
+    left: -30px;
+    color: white;
+    display: none;
+}
+/*  */
+
+.video-container,.video-player{
+    z-index: 100;
+    background-color:rgba(0,0,0,0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 5340px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+   visibility: hidden;
+}
+.video-player{
+    position: fixed;
+    top: 50%;
+    /* width: 100%; */
+}
+video{
+    width: 900px;
+}
+.hidden{
+    visibility: visible;
+}
+/*  */
+
+.cards{
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    position: relative;
+    padding:5px;
+}
+.cards .card{
+    width: 323px;
+    display: flex;
+    gap: 5px;
+    height: 200px;
+    /* background-color: rebeccapurple; */
+    position: relative;
+    padding: 10px;
+}
+.cards .card img{
+    width: 100%;
+}
+.card .card-info{
+    position: relative;
+}
+.card-info h2{
+    text-transform: capitalize;
+    font-size: 14px;
+    color: white;
+    line-height: 20px;
+    cursor: pointer;
+    font-family: 'Philosopher', sans-serif;
+
+}
+.card-info p{
+    position: absolute;
+    bottom: 5px;
+    color: white;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+}
+/*  */
+.actors{
+    width: 990px;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 15px;
+}
+.actors .actor {
+    /* background-color: ed; */
+    width: 180px;
+    height: 400px;
+    padding: 10px;
+}
+.actors .actor img{
+    width: 170px;
+    height: 240px;
+    border-radius: 5px;
+}
+.actor h2{
+    color: white;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+/*  */
+
+.items{
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.items .item{
+    /* background: red; */
+    width: 230px;   
+}
+.item img{
+    width: 100%;
+}
+.details{
+    padding: 0 10px;
+}
+.item .item-info{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.item-info ion-icon{
+    color: orange;
+    font-size: 18px;
+}
+.item-info h2{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+.item-info p{
+    position: relative;
+    top: 4px;
+    /* background-color: orange; */
+}
+.item p{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.item button{
+    position: relative;
+    padding: 8px;
+    color: white;
+    text-transform: capitalize;
+    font-family: 'Philosopher', sans-serif;
+    background-color: orange;
+    width: 100%;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+}
